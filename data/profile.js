@@ -25,7 +25,7 @@ window.ACADEMIC_PROFILE = {
    *   photo: "assets/images/profile.jpg"
    * Leave as "" to display a clean academic monogram placeholder instead.
    */
-  photo: "",
+  photo: "assets/images/profile.jpg",
   photoAlt: "Portrait of Joy Das",
 
   /**
