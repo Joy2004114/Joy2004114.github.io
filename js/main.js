@@ -316,133 +316,78 @@
     var container = document.getElementById("experience-list");
     if (!container) return;
 
-    var researchHtml = (profile.researchExperience || [])
-      .map(function (exp) {
-        var inst = exp.institutionUrl
-          ? '<a href="' +
-            escapeHtml(exp.institutionUrl) +
-            '" target="_blank" rel="noopener noreferrer">' +
-            escapeHtml(exp.institution) +
-            "</a>"
-          : escapeHtml(exp.institution);
+    function renderGroup(title, items, isFirst) {
+      if (!items || !items.length) return "";
+      var cards = items
+        .map(function (item) {
+          var orgName = item.organization || item.institution || "";
+          var orgUrl = item.organizationUrl || item.institutionUrl || "";
+          var org = orgUrl
+            ? '<a href="' +
+              escapeHtml(orgUrl) +
+              '" target="_blank" rel="noopener noreferrer">' +
+              escapeHtml(orgName) +
+              "</a>"
+            : escapeHtml(orgName);
 
-        var sup = exp.supervisor
-          ? " · Supervisor: " +
-            (exp.supervisorUrl
-              ? '<a href="' +
-                escapeHtml(exp.supervisorUrl) +
-                '" target="_blank" rel="noopener noreferrer">' +
-                escapeHtml(exp.supervisor) +
-                "</a>"
-              : escapeHtml(exp.supervisor))
-          : "";
-
-        var tracksHtml = (exp.tracks || [])
-          .map(function (tr) {
-            var linksHtml = (tr.links || [])
-              .map(function (lk) {
-                return (
-                  '<a class="inline-link" href="' +
-                  escapeHtml(lk.url) +
+          var sup = item.supervisor
+            ? '<p class="experience-meta" style="margin:4px 0 0;">Supervisor: ' +
+              (item.supervisorUrl
+                ? '<a href="' +
+                  escapeHtml(item.supervisorUrl) +
                   '" target="_blank" rel="noopener noreferrer">' +
-                  escapeHtml(lk.label) +
-                  ICONS.external +
+                  escapeHtml(item.supervisor) +
                   "</a>"
-                );
-              })
-              .join("");
+                : escapeHtml(item.supervisor)) +
+              "</p>"
+            : "";
 
-            return (
-              '<div class="track-card">' +
-              '<div class="track-header">' +
-              '<h4 class="track-title">' +
-              escapeHtml(tr.title) +
-              "</h4>" +
-              (tr.badge
-                ? '<span class="tag tag-accent">' + escapeHtml(tr.badge) + "</span>"
-                : "") +
-              "</div>" +
-              '<dl class="track-dl">' +
-              '<div class="track-dl-row"><dt>Problem</dt><dd>' +
-              escapeHtml(tr.problem) +
-              "</dd></div>" +
-              '<div class="track-dl-row"><dt>Contribution</dt><dd>' +
-              escapeHtml(tr.contribution) +
-              "</dd></div>" +
-              '<div class="track-dl-row"><dt>Methods</dt><dd>' +
-              escapeHtml(tr.methods) +
-              "</dd></div>" +
-              '<div class="track-dl-row"><dt>Outcome</dt><dd>' +
-              escapeHtml(tr.outcome) +
-              "</dd></div>" +
-              "</dl>" +
-              (linksHtml
-                ? '<div class="inline-links" style="margin-top:10px;">' + linksHtml + "</div>"
-                : "") +
-              "</div>"
-            );
-          })
-          .join("");
+          var body =
+            item.points && item.points.length
+              ? '<ul class="edu-details" style="margin-top:8px;">' +
+                item.points
+                  .map(function (pt) {
+                    return "<li>" + escapeHtml(pt) + "</li>";
+                  })
+                  .join("") +
+                "</ul>"
+              : item.summary
+              ? "<p>" + escapeHtml(item.summary) + "</p>"
+              : "";
 
-        return (
-          '<article class="experience-entry">' +
-          '<div class="experience-header">' +
-          '<h3 class="experience-role">' +
-          escapeHtml(exp.role) +
-          "</h3>" +
-          '<span class="experience-date">' +
-          escapeHtml(exp.duration) +
-          "</span>" +
-          "</div>" +
-          '<p class="experience-meta">' +
-          inst +
-          sup +
-          "</p>" +
-          '<div class="track-list">' +
-          tracksHtml +
-          "</div>" +
-          "</article>"
-        );
-      })
-      .join("");
+          return (
+            '<article class="industry-item">' +
+            '<div class="experience-header">' +
+            '<h4 class="track-title">' +
+            escapeHtml(item.role) +
+            (org ? " — " + org : "") +
+            "</h4>" +
+            (item.duration
+              ? '<span class="experience-date">' + escapeHtml(item.duration) + "</span>"
+              : "") +
+            "</div>" +
+            sup +
+            body +
+            "</article>"
+          );
+        })
+        .join("");
 
-    var industryHtml = "";
-    if (profile.industryExperience && profile.industryExperience.length) {
-      industryHtml =
-        '<h3 class="subsection-title">Industry &amp; Security Experience</h3>' +
+      return (
+        '<h3 class="subsection-title"' +
+        (isFirst ? ' style="margin-top:0;"' : "") +
+        ">" +
+        title +
+        "</h3>" +
         '<div class="industry-list">' +
-        profile.industryExperience
-          .map(function (job) {
-            var org = job.organizationUrl
-              ? '<a href="' +
-                escapeHtml(job.organizationUrl) +
-                '" target="_blank" rel="noopener noreferrer">' +
-                escapeHtml(job.organization) +
-                "</a>"
-              : escapeHtml(job.organization);
-            return (
-              '<article class="industry-item">' +
-              '<div class="experience-header">' +
-              '<h4 class="track-title">' +
-              escapeHtml(job.role) +
-              " — " +
-              org +
-              "</h4>" +
-              '<span class="experience-date">' +
-              escapeHtml(job.duration) +
-              "</span>" +
-              "</div>" +
-              "<p>" +
-              escapeHtml(job.summary) +
-              "</p>" +
-              "</article>"
-            );
-          })
-          .join("") +
-        "</div>";
+        cards +
+        "</div>"
+      );
     }
 
-    container.innerHTML = '<div class="timeline">' + researchHtml + "</div>" + industryHtml;
+    container.innerHTML =
+      renderGroup("Research Experience", profile.researchExperience, true) +
+      renderGroup("Industry Experience", profile.industryExperience, false);
   }
 
   // --------------------------------------------------------------------------
