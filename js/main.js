@@ -78,15 +78,13 @@
     var hasPubs = Array.isArray(profile.publications) && profile.publications.length > 0;
     var items = [
       { id: "home", label: "Home" },
-      { id: "thesis", label: "Thesis" },
+      { id: "thesis", label: " Undergraduate Thesis" },
       { id: "experience", label: "Experience" },
       { id: "projects", label: "Projects" }
     ];
     if (hasPubs) items.push({ id: "publications", label: "Publications" });
     items.push(
       { id: "education", label: "Education" },
-      { id: "cv", label: "CV" },
-      { id: "contact", label: "Contact" }
     );
 
     var navList = document.getElementById("nav-links");
