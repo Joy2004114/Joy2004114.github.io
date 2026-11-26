@@ -78,7 +78,7 @@
     var hasPubs = Array.isArray(profile.publications) && profile.publications.length > 0;
     var items = [
       { id: "home", label: "Home" },
-      { id: "research", label: "Research" },
+      { id: "thesis", label: "Thesis" },
       { id: "experience", label: "Experience" },
       { id: "projects", label: "Projects" }
     ];
@@ -251,32 +251,64 @@
   // --------------------------------------------------------------------------
   // 4. Research Interests
   // --------------------------------------------------------------------------
-  function renderResearchInterests() {
-    var container = document.getElementById("research-list");
-    if (!container) return;
+  function renderThesis() {
+    var container = document.getElementById("thesis-content");
+    var th = profile.thesis;
+    if (!container || !th) return;
 
-    container.innerHTML = (profile.researchInterests || [])
-      .map(function (item) {
-        var topics = (item.topics || [])
-          .map(function (t) {
-            return '<span class="topic-pill">' + escapeHtml(t) + "</span>";
-          })
-          .join("");
+    var inst = th.institutionUrl
+      ? '<a href="' + escapeHtml(th.institutionUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(th.institution) + "</a>"
+      : escapeHtml(th.institution || "");
+
+    var sup = th.supervisor
+      ? " · Supervisor: " +
+        (th.supervisorUrl
+          ? '<a href="' + escapeHtml(th.supervisorUrl) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(th.supervisor) + "</a>"
+          : escapeHtml(th.supervisor))
+      : "";
+
+    var highlightsHtml = (th.highlights || [])
+      .map(function (h) {
+        return "<li>" + escapeHtml(h) + "</li>";
+      })
+      .join("");
+
+    var techHtml = (th.technologies || [])
+      .map(function (t) {
+        return '<span class="topic-pill">' + escapeHtml(t) + "</span>";
+      })
+      .join("");
+
+    var linksHtml = (th.links || [])
+      .map(function (lk) {
         return (
-          '<article class="interest-item">' +
-          "<h3>" +
-          escapeHtml(item.title) +
-          "</h3>" +
-          "<p>" +
-          escapeHtml(item.description) +
-          "</p>" +
-          '<div class="topic-list">' +
-          topics +
-          "</div>" +
-          "</article>"
+          '<a class="inline-link" href="' +
+          escapeHtml(lk.url) +
+          '" target="_blank" rel="noopener noreferrer">' +
+          escapeHtml(lk.label) +
+          ICONS.external +
+          "</a>"
         );
       })
       .join("");
+
+    container.innerHTML =
+      '<article class="project-card is-featured">' +
+      '<div class="project-header">' +
+      '<div class="project-title-wrap">' +
+      '<h3 class="project-title">' + escapeHtml(th.title) + "</h3>" +
+      (th.grade ? '<span class="tag tag-accent">' + escapeHtml(th.grade) + "</span>" : "") +
+      "</div>" +
+      (th.duration ? '<span class="project-date">' + escapeHtml(th.duration) + "</span>" : "") +
+      "</div>" +
+      '<p class="experience-meta" style="margin:0 0 12px;">' + inst + sup + "</p>" +
+      (th.summary ? '<p style="margin:0 0 12px; font-size:0.92rem; color:var(--text-secondary);">' + escapeHtml(th.summary) + "</p>" : "") +
+      (highlightsHtml ? '<ul class="edu-details" style="margin-bottom:14px;">' + highlightsHtml + "</ul>" : "") +
+      '<div class="project-footer">' +
+      '<div class="topic-list">' + techHtml + "</div>" +
+      (linksHtml ? '<div class="inline-links">' + linksHtml + "</div>" : "") +
+      "</div>" +
+      "</article>";
   }
 
   // --------------------------------------------------------------------------
@@ -956,7 +988,7 @@ function renderProjects() {
   renderNav();
   renderSidebar();
   renderHero();
-  renderResearchInterests();
+  renderThesis();
   renderExperience();
   renderProjects();
   renderPublications();
