@@ -85,6 +85,8 @@
     if (hasPubs) items.push({ id: "publications", label: "Publications" });
     items.push(
       { id: "education", label: "Education" },
+      { id: "skills", label: "Skills" },
+      { id: "achievements", label: "Others" }
     );
 
     var navList = document.getElementById("nav-links");
