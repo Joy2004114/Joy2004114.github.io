@@ -68,6 +68,7 @@
     document.body.removeChild(ta);
   }
 
+  
   // --------------------------------------------------------------------------
   // 1. Navigation Bar
   // --------------------------------------------------------------------------
@@ -78,12 +79,12 @@
     var hasPubs = Array.isArray(profile.publications) && profile.publications.length > 0;
     var items = [
       { id: "home", label: "Home" },
-      { id: "thesis", label: " Undergraduate Thesis" },
-      { id: "experience", label: "Experience" },
-      { id: "projects", label: "Projects" }
+      { id: "thesis", label: "Undergraduate Thesis" }
     ];
     if (hasPubs) items.push({ id: "publications", label: "Publications" });
     items.push(
+      { id: "experience", label: "Experience" },
+      { id: "projects", label: "Projects" },
       { id: "education", label: "Education" },
       { id: "skills", label: "Skills" },
       { id: "achievements", label: "Others" }
