@@ -17,7 +17,7 @@ window.ACADEMIC_PROFILE = {
   title: "Prospective PhD Applicant · Multimodal AI, NLP & Trustworthy ML",
   affiliation: "B.Sc. in Computer Science & Engineering, CUET",
   location: "Dhaka, Bangladesh",
-  status: "Seeking Fall 2027 PhD Positions",
+  status: "Seeking MS/PhD Opportunities",
 
   /**
    * Profile photograph:
@@ -45,7 +45,7 @@ window.ACADEMIC_PROFILE = {
   // Leave any optional link as "" to hide it automatically.
   // --------------------------------------------------------------------------
   links: {
-    email: "joydas2004114@gmail.com",
+    //email: "joydas2004114@gmail.com",
     github: "https://github.com/Joy2004114",
     linkedin: "https://www.linkedin.com/in/joy-das-744ba1317",// Example: "https://scholar.google.com/citations?user=YOUR_ID"
     orcid: ""          // Example: "https://orcid.org/0000-0000-0000-0000"
@@ -68,50 +68,45 @@ window.ACADEMIC_PROFILE = {
   "Trustworthy AI"
   ],
 
-
+// --------------------------------------------------------------------------
+  // 4. UNDERGRADUATE THESIS
+  // --------------------------------------------------------------------------
+  thesis: {
+    title: "Transformer-Based Multimodal Framework for Detecting Hate Speech on Social Media",
+    institution: "CUET NLP Lab, Chittagong University of Engineering & Technology (CUET)",
+    institutionUrl: "https://cuet.ac.bd/",
+    supervisor: "Prof. Dr. M. Moshiul Hoque",
+    supervisorUrl: "https://aclanthology.org/people/mohammed-moshiul-hoque/",
+    grade: "Thesis Grade: 4.00 / 4.00",
+    duration: "2025 – 2026",
+    summary:
+      "Investigated multimodal hate speech detection on Bengali social media, where harmful intent often spans spoken audio, video frames, and text simultaneously.",
+    highlights: [
+      "Developed BanglaMMH, a Bengali multimodal hate speech dataset containing 2,001 aligned text, audio, and video samples.",
+      "Designed a transformer-based trimodal framework integrating BanglaBERT, Whisper, and ViViT using cross-attention and learnable modality weighting.",
+      "Evaluated unimodal, bimodal, and trimodal configurations across fusion strategies, with the best trimodal model achieving a macro F1-score of 0.88."
+    ],
+    technologies: ["BanglaBERT", "Whisper", "ViViT", "Cross-Attention", "Multimodal Fusion", "Python"],
+    links: [] // Optional: add { label: "GitHub Repository", url: "..." } or paper/slides link later
+  },
   // --------------------------------------------------------------------------
   // 5. RESEARCH EXPERIENCE
   // --------------------------------------------------------------------------
-  researchExperience: [
+ researchExperience: [
     {
       role: "Undergraduate Research Fellow",
-      institution: "CUET NLP Lab, Chittagong University of Engineering & Technology (CUET)",
-      institutionUrl: "https://cuet.ac.bd/",
+      organization: "CUET NLP Lab, Chittagong University of Engineering & Technology (CUET)",
+      organizationUrl: "https://cuet.ac.bd/",
       supervisor: "Prof. Dr. M. Moshiul Hoque",
-      supervisorUrl: "https://scholar.google.com/citations?user=srYxYhcAAAAJ&hl=en",
+      supervisorUrl: "https://aclanthology.org/people/mohammed-moshiul-hoque/",
       duration: "Feb 2025 – Present",
-      location: "Chattogram, Bangladesh",
-      tracks: [
-        {
-          title: "Undergraduate Thesis: Transformer-Based Multimodal Framework for Detecting Hate Speech on Social Media",
-          badge: "Thesis Grade: 4.00 / 4.00",
-          problem:
-            "Hate speech on Bengali social media frequently relies on spoken tone, visual cues, and textual context together, causing text-only classifiers to miss implicit or multimodal harm.",
-          contribution:
-            "Constructed BanglaMMH, a Bengali multimodal hate speech dataset comprising 2,001 aligned text, audio, and video samples; designed and evaluated a trimodal transformer framework combining modality-specific encoders via cross-attention and learnable modality weighting.",
-          methods: "BanglaBERT, Whisper, ViViT, Cross-Attention, Learnable Modality Weighting, Unimodal/Bimodal/Trimodal Ablations",
-          outcome:
-            "Systematic evaluation across fusion strategies showed consistent gains from trimodal integration, with the best trimodal model achieving a macro F1-score of 0.88."
-        },
-        {
-          title: "Arabic Multimodal Hateful Meme Detection — MAHED Shared Task",
-          badge: "Published · ArabicNLP 2025",
-          problem:
-            "Detecting hateful content in Arabic memes requires jointly interpreting dialectal text overlays and visual imagery whose combined meaning differs from either modality alone.",
-          contribution:
-            "Developed an early-fusion multimodal classification pipeline combining multilingual text representations with deep visual features, benchmarked against unimodal baselines.",
-          methods: "mBERT, InceptionResNetV2, Early Multimodal Fusion, Hyperparameter Tuning",
-          outcome:
-            "Achieved an official macro F1-score of 0.63 (0.629), ranking 6th out of 42 participating teams, and published in Proceedings of ArabicNLP 2025 (co-located with EMNLP 2025).",
-          links: [
-            { label: "ACL Anthology", url: "https://aclanthology.org/2025.arabicnlp-sharedtasks.94/" },
-            { label: "Paper PDF", url: "https://aclanthology.org/2025.arabicnlp-sharedtasks.94.pdf" }
-          ]
-        }
+      points: [
+        "Conducted research on multimodal hate speech detection for Bangla social media across text, audio, and video.",
+        "Led dataset collection and preprocessing, experimental design, transformer-based multimodal modeling, and systematic evaluation.",
+        "Co-authored a shared-task paper on Arabic multimodal hateful meme detection, published in the proceedings of ArabicNLP 2025 (co-located with EMNLP 2025)."
       ]
     }
   ],
-
   // --------------------------------------------------------------------------
   // 5B. INDUSTRY & SECURITY EXPERIENCE (Compact subsection)
   // --------------------------------------------------------------------------
@@ -355,6 +350,35 @@ window.ACADEMIC_PROFILE = {
       ]
     }
   ],
+  courses: [
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Theory of Computing",
+        "Applied Statistics and Queuing Theory",
+        "Data Structures",
+        "Algorithms",
+        "Structured Programming",
+        "Object-Oriented Programming",
+        "Database Management Systems",
+        "Software Engineering",
+        "Digital Systems Design",
+        "Digital Logic Design",
+        "Computer Graphics",
+        "Compiler Design",
+        "Information Security",
+        "System Analysis and Design",
+        "Computer Networks",
+        "Computer Architecture",
+        "Computer Peripherals and Interfacing",
+        "Microprocessors and Assembly Language Programming",
+        "Operating Systems",
+        "Data Communication",
+        "Fourier Analysis and Laplace Transformation",
+        "Numerical Analysis",
+        "Discrete Mathematics"
+      ]
+    }
+  ],
 
   // --------------------------------------------------------------------------
   // 9. TECHNICAL SKILLS (No proficiency bars or arbitrary percentages)
@@ -418,16 +442,16 @@ window.ACADEMIC_PROFILE = {
         url: "https://www.coursera.org/account/accomplishments/specialization/SWX6WKR0ZD0F"
       },
       {
-        title: "Applied Cryptography",
-        issuer: "Coursera",
-        topics: "Symmetric & Asymmetric Cryptography, RSA, ECC, Key Management, Hash Functions, MACs, Digital Signatures",
-        url: "https://www.coursera.org/account/accomplishments/specialization/certificate/2O5WLBLWIYQ1"
-      },
-      {
         title: "IBM Cybersecurity Analyst Professional Certificate",
         issuer: "IBM (Coursera)",
         topics: "Threat Hunting, IAM, Threat Intelligence, Incident Response, Digital Forensics, Penetration Testing",
         url: "https://www.coursera.org/account/accomplishments/professional-cert/certificate/SNV6P0WXC4X9"
+      },
+       {
+        title: "Applied Cryptography",
+        issuer: "Coursera",
+        topics: "Symmetric & Asymmetric Cryptography, RSA, ECC, Key Management, Hash Functions, MACs, Digital Signatures",
+        url: "https://www.coursera.org/account/accomplishments/specialization/certificate/2O5WLBLWIYQ1"
       },
       {
         title: "Jr Penetration Tester",
