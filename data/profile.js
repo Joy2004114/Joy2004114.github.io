@@ -47,9 +47,7 @@ window.ACADEMIC_PROFILE = {
   links: {
     email: "joydas2004114@gmail.com",
     github: "https://github.com/Joy2004114",
-    linkedin: "https://www.linkedin.com/in/joy-das-744ba1317",
-    aclAnthology: "https://aclanthology.org/people/joy-das/",
-    googleScholar: "", // Example: "https://scholar.google.com/citations?user=YOUR_ID"
+    linkedin: "https://www.linkedin.com/in/joy-das-744ba1317",// Example: "https://scholar.google.com/citations?user=YOUR_ID"
     orcid: ""          // Example: "https://orcid.org/0000-0000-0000-0000"
   },
 
@@ -110,7 +108,7 @@ window.ACADEMIC_PROFILE = {
       institution: "CUET NLP Lab, Chittagong University of Engineering & Technology (CUET)",
       institutionUrl: "https://cuet.ac.bd/",
       supervisor: "Prof. Dr. M. Moshiul Hoque",
-      supervisorUrl: "https://aclanthology.org/people/mohammed-moshiul-hoque/",
+      supervisorUrl: "https://scholar.google.com/citations?user=srYxYhcAAAAJ&hl=en",
       duration: "Feb 2025 – Present",
       location: "Chattogram, Bangladesh",
       tracks: [
@@ -208,62 +206,113 @@ window.ACADEMIC_PROFILE = {
         { label: "PDF", url: "https://aclanthology.org/2025.arabicnlp-sharedtasks.94.pdf" }
       ]
     },
-    {
-      title: "Network Intrusion Detection using Machine Learning & Deep Learning",
-      date: "Jul 2025",
-      featured: false,
-      highlightLabel: "",
-      problem:
-        "Classifying benign versus malicious network traffic under severe class imbalance, where rare intrusion classes are easily overwhelmed by normal traffic.",
-      whyItMatters:
-        "Reliable automated intrusion detection is essential for identifying network-level threats early while minimizing false negatives on underrepresented attack patterns.",
-      methodology:
-        "Built a comparative NIDS pipeline with feature preprocessing and SMOTE-based class balancing, benchmarking tree-based ensembles (Random Forest, XGBoost) alongside neural architectures (ANN, GRU, DNN).",
-      contribution:
-        "Designed the preprocessing and SMOTE balancing workflow, trained and evaluated all five model families, and analyzed comparative classification metrics.",
-      results: "Random Forest achieved an F1-score of 99.63% on benign/malicious classification.",
-      technologies: ["Python", "scikit-learn", "TensorFlow", "XGBoost", "SMOTE", "GRU / DNN"],
+   {
+      title: "Network Intrusion Detection",
+      highlightLabel: "Cybersecurity · Machine Learning · XAI",
+      goal: "Detect malicious network traffic using SHAP-based XAI to distinguish attacks from benign activity and explain model predictions.",
+      modelLabel: "Models",
+      models: "Random Forest, XGBoost, SVM, ANN, GRU, DNN",
+      results: "Best reported F1-score of 0.9963 with Random Forest",
+      whatIDid: [
+        "Data preprocessing and feature scaling",
+        "Class imbalance handling using SMOTE",
+        "ML and deep learning model training",
+        "Performance comparison using classification metrics",
+        "SHAP-based feature importance analysis to interpret model predictions"
+      ],
+      technologies: ["Python", "Pandas", "Scikit-learn", "TensorFlow", "Matplotlib"],
       links: [
         { label: "GitHub Repository", url: "https://github.com/Joy2004114/Network-Intrusion-Detection" }
       ]
     },
     {
-      title: "Telecom Customer Churn Prediction & Hyperparameter Optimization",
-      date: "Nov 2024",
-      featured: false,
-      highlightLabel: "",
-      problem:
-        "Predicting customer churn from structured telecom service records while preventing overfitting in interpretable tree-based models.",
-      whyItMatters:
-        "Interpretable classifiers tuned via systematic validation allow analysts to understand which service factors drive churn rather than relying on opaque heuristics.",
-      methodology:
-        "Implemented a Decision Tree Classifier baseline and applied cross-validated grid search over tree depth and splitting criteria.",
-      contribution:
-        "Built the data preprocessing, baseline modeling, and k-fold cross-validation hyperparameter tuning pipeline.",
-      results: "Improved classification accuracy from 91% (baseline) to 94% after grid search and cross-validation.",
-      technologies: ["Python", "scikit-learn", "Decision Trees", "Grid Search", "Cross-Validation"],
+      title: "Lung Cancer Prediction",
+      highlightLabel: "Healthcare AI · Machine Learning",
+      goal: "Predict lung cancer risk from survey-based patient features",
+      modelLabel: "Model",
+      models: "Logistic Regression",
+      results: "Achieved 97% accuracy and 0.97 macro F1-score",
+      whatIDid: [
+        "Data cleaning and categorical feature encoding",
+        "Exploratory data and correlation analysis",
+        "Feature engineering and feature selection",
+        "Class imbalance handling using ADASYN",
+        "Model training and performance evaluation"
+      ],
+      technologies: ["Python", "Pandas", "Scikit-learn", "Matplotlib", "Seaborn"],
+      links: []
+    },
+    {
+      title: "SKODA Used Car Price Prediction",
+      highlightLabel: "Data Analytics · Machine Learning",
+      goal: "Predict the resale price of used SKODA cars using vehicle characteristics",
+      modelLabel: "Model",
+      models: "Linear Regression",
+      results: "Evaluated prediction performance using MAE, MSE, RMSE, and R²",
+      whatIDid: [
+        "Data cleaning and exploratory data analysis",
+        "Categorical feature encoding and preprocessing",
+        "Price trend and feature relationship visualization",
+        "Regression model training and evaluation",
+        "Actual vs. predicted price analysis"
+      ],
+      technologies: ["Python", "Pandas", "Scikit-learn", "Matplotlib", "Seaborn"],
+      links: []
+    },
+    {
+      title: "Telecom Customer Churn Prediction",
+      highlightLabel: "Business Analytics · Machine Learning",
+      goal: "Predict whether a telecom customer is likely to churn",
+      modelLabel: "Model",
+      models: "Decision Tree Classifier",
+      results: "Achieved 91.9% accuracy and 0.85 ROC-AUC after hyperparameter tuning",
+      whatIDid: [
+        "Data cleaning and categorical feature encoding",
+        "Feature scaling and feature selection",
+        "Decision Tree model training and evaluation",
+        "Hyperparameter tuning using GridSearchCV and cross-validation",
+        "ROC curve and confusion matrix analysis"
+      ],
+      technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib"],
       links: [
         { label: "GitHub Repository", url: "https://github.com/Joy2004114/Telecom_Customer_Churn" }
       ]
     },
     {
       title: "Home Inventory Management System",
-      date: "2024",
-      featured: false,
-      highlightLabel: "Systems Engineering",
-      problem:
-        "Building a secure, maintainable full-stack application for tracking household assets with verified user authentication and role-safe workflows.",
-      whyItMatters:
-        "Demonstrates end-to-end software engineering discipline, secure authentication design, and structured team coordination.",
-      methodology:
-        "Architected a MERN-stack application featuring item management, search, notifications, reporting, user verification, and password reset flows coordinated through Jira under SDLC practices.",
-      contribution:
-        "Led system design and development across backend authentication, data modeling, and sprint coordination.",
-      results: "Delivered a complete full-stack web application with verified authentication and reporting modules.",
-      technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "JavaScript", "Jira"],
+      highlightLabel: "Full-Stack Web Development · MERN Stack · Web Security",
+      goal: "Develop a secure web-based system for managing household inventory and tracking items efficiently.",
+      modelLabel: "System",
+      models: "MERN Stack (MongoDB, Express.js, React, Node.js)",
+      results: "Built a complete inventory management application with secure authentication, user verification, password reset, search, filtering, notifications, and reporting.",
+      whatIDid: [
+        "Led the project team and coordinated development tasks using Jira",
+        "Developed item management, search, filtering, notification, and reporting features",
+        "Implemented secure authentication, user verification, and password-reset functionality",
+        "Designed and integrated frontend, backend, and database components",
+        "Followed SDLC principles throughout development and testing"
+      ],
+      technologies: ["React", "Node.js", "Express.js", "MongoDB", "JavaScript", "Jira"],
       links: [
         { label: "GitHub Repository", url: "https://github.com/Joy2004114/Home-Inventory-Management-System" }
       ]
+    },
+    {
+      title: "Stadium and Ticket Management System",
+      highlightLabel: "Full-Stack Web Development · MERN Stack",
+      goal: "Develop a web-based platform for stadium event management and online ticket booking.",
+      modelLabel: "System",
+      models: "MERN Stack (MongoDB, Express.js, React, Node.js)",
+      results: "Built an event and ticket booking system with user authentication, real-time seat tracking, secure payment integration, and an admin dashboard.",
+      whatIDid: [
+        "Developed event management and ticket booking functionalities",
+        "Implemented user authentication and real-time seat availability tracking",
+        "Integrated secure online payment functionality",
+        "Built an admin panel for event management and basic analytics",
+        "Developed and integrated frontend, backend, and database components"
+      ],
+      technologies: ["React", "Node.js", "Express.js", "MongoDB", "JavaScript"],
+      links: []
     }
   ],
 
