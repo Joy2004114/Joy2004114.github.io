@@ -470,5 +470,5 @@ window.ACADEMIC_PROFILE = {
   // --------------------------------------------------------------------------
   // 11. FOOTER
   // --------------------------------------------------------------------------
-  footerNote: "Academic Research Webpage · Built for clarity and reproducibility."
+  footerNote: "joydas2004114@gmail.com"
 };
