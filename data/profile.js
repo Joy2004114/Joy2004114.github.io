@@ -14,7 +14,7 @@ window.ACADEMIC_PROFILE = {
   // --------------------------------------------------------------------------
   name: "Joy Das",
   initials: "JD",
-  title: "Prospective PhD Applicant · Multimodal AI, NLP & Trustworthy ML",
+  title: "Prospective PhD Applicant",
   affiliation: "B.Sc. in Computer Science & Engineering, CUET",
   location: "Dhaka, Bangladesh",
   status: "Seeking MS/PhD Opportunities",
@@ -89,6 +89,96 @@ window.ACADEMIC_PROFILE = {
     technologies: ["BanglaBERT", "Whisper", "ViViT", "Cross-Attention", "Multimodal Fusion", "Python"],
     links: [] // Optional: add { label: "GitHub Repository", url: "..." } or paper/slides link later
   },
+
+   // --------------------------------------------------------------------------
+  // 7. PUBLICATIONS
+  // If empty ([]), the Publications section and navbar link are hidden automatically.
+  // --------------------------------------------------------------------------
+  publications: [
+    {
+      title: "joy_2004114 at MAHED Shared Task: Filtering Hate Speech from Memes using A Multimodal Fusion-based Approach",
+      authors: ["Joy Das", "Alamgir Hossain", "Mohammed Moshiul Hoque"],
+      highlightAuthor: "Joy Das",
+      venue: "Proceedings of The Third Arabic Natural Language Processing Conference: Shared Tasks (ArabicNLP 2025), co-located with EMNLP 2025, Suzhou, China",
+      publisher: "Association for Computational Linguistics (ACL)",
+      pages: "pp. 683–691",
+      date: "Nov 2025",
+      year: "2025",
+      note: "Ranked 6th out of 42 participating teams (Macro F1: 0.63) · DOI: 10.18653/v1/2025.arabicnlp-sharedtasks.94",
+      links: [
+        { label: "ACL Anthology", url: "https://aclanthology.org/2025.arabicnlp-sharedtasks.94/" },
+        { label: "PDF", url: "https://aclanthology.org/2025.arabicnlp-sharedtasks.94.pdf" },
+        { label: "DOI", url: "https://doi.org/10.18653/v1/2025.arabicnlp-sharedtasks.94" }
+      ],
+      bibtex: `@inproceedings{das-etal-2025-joy,
+    title = "joy{\\_}2004114 at {MAHED} Shared Task : Filtering Hate Speech from Memes using A Multimodal Fusion-based Approach",
+    author = "Das, Joy  and
+      Hossain, Alamgir  and
+      Moshiul Hoque, Mohammed",
+    editor = "Darwish, Kareem  and
+      Ali, Ahmed  and
+      Abu Farha, Ibrahim  and
+      Touileb, Samia  and
+      Zitouni, Imed  and
+      Abdelali, Ahmed  and
+      Al-Ghamdi, Sharefah  and
+      Alkhereyf, Sakhar  and
+      Zaghouani, Wajdi  and
+      Khalifa, Salam  and
+      AlKhamissi, Badr  and
+      Almatham, Rawan  and
+      Hamed, Injy  and
+      Alyafeai, Zaid  and
+      Alowisheq, Areeb  and
+      Inoue, Go  and
+      Mrini, Khalil  and
+      Alshammari, Waad",
+    booktitle = "Proceedings of The Third {A}rabic Natural Language Processing Conference: Shared Tasks",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.arabicnlp-sharedtasks.94/",
+    doi = "10.18653/v1/2025.arabicnlp-sharedtasks.94",
+    pages = "683--691",
+    ISBN = "979-8-89176-356-2"
+}`
+    },
+    {
+      title: "OncoReGen: A Reinforcement-Guided GPT Pipeline for Precision Oncology and EGFR Inhibitor Discovery",
+      authors: [
+        "Istahak Ahammed",
+        "Abid Hossain",
+        "Snaholata Mondal",
+        "Md. Al-Mamun Provath",
+        "Musfequa Rahman",
+        "Rifa Nawal",
+        "Joy Das"
+      ],
+      highlightAuthor: "Joy Das",
+      venue: "2025 28th International Conference on Computer and Information Technology (ICCIT)",
+      publisher: "IEEE",
+      pages: "pp. 1016–1021",
+      date: "Dec 2025",
+      year: "2025",
+      note: "DOI: 10.1109/ICCIT68739.2025.11491169",
+      links: [
+        { label: "IEEE Xplore", url: "https://ieeexplore.ieee.org/abstract/document/11491169" },
+        { label: "DOI", url: "https://doi.org/10.1109/ICCIT68739.2025.11491169" }
+      ],
+      bibtex: `@INPROCEEDINGS{11491169,
+  author={Ahammed, Istahak and Hossain, Abid and Mondal, Snaholata and Provath, Md. Al-Mamun and Rahman, Musfequa and Nawal, Rifa and Das, Joy},
+  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},
+  title={OncoReGen: A Reinforcement-Guided GPT Pipeline for Precision Oncology and EGFR Inhibitor Discovery},
+  year={2025},
+  volume={},
+  number={},
+  pages={1016-1021},
+  keywords={Protocols;HTTP;Artificial intelligence;Deep learning;Generative Pre-trained transformer;Machine learning;Reinforcement learning;Predictive models;Convolutional neural networks;Large language models;Reinforcement learning;EGFR;PPO;SMILES;Molecular generation;Drug Discovery},
+  doi={10.1109/ICCIT68739.2025.11491169}
+}`
+    }
+  ],
   // --------------------------------------------------------------------------
   // 5. RESEARCH EXPERIENCE
   // --------------------------------------------------------------------------
@@ -244,95 +334,7 @@ window.ACADEMIC_PROFILE = {
     }
   ],
 
- // --------------------------------------------------------------------------
-  // 7. PUBLICATIONS
-  // If empty ([]), the Publications section and navbar link are hidden automatically.
-  // --------------------------------------------------------------------------
-  publications: [
-    {
-      title: "joy_2004114 at MAHED Shared Task: Filtering Hate Speech from Memes using A Multimodal Fusion-based Approach",
-      authors: ["Joy Das", "Alamgir Hossain", "Mohammed Moshiul Hoque"],
-      highlightAuthor: "Joy Das",
-      venue: "Proceedings of The Third Arabic Natural Language Processing Conference: Shared Tasks (ArabicNLP 2025), co-located with EMNLP 2025, Suzhou, China",
-      publisher: "Association for Computational Linguistics (ACL)",
-      pages: "pp. 683–691",
-      date: "Nov 2025",
-      year: "2025",
-      note: "Ranked 6th out of 42 participating teams (Macro F1: 0.63) · DOI: 10.18653/v1/2025.arabicnlp-sharedtasks.94",
-      links: [
-        { label: "ACL Anthology", url: "https://aclanthology.org/2025.arabicnlp-sharedtasks.94/" },
-        { label: "PDF", url: "https://aclanthology.org/2025.arabicnlp-sharedtasks.94.pdf" },
-        { label: "DOI", url: "https://doi.org/10.18653/v1/2025.arabicnlp-sharedtasks.94" }
-      ],
-      bibtex: `@inproceedings{das-etal-2025-joy,
-    title = "joy{\\_}2004114 at {MAHED} Shared Task : Filtering Hate Speech from Memes using A Multimodal Fusion-based Approach",
-    author = "Das, Joy  and
-      Hossain, Alamgir  and
-      Moshiul Hoque, Mohammed",
-    editor = "Darwish, Kareem  and
-      Ali, Ahmed  and
-      Abu Farha, Ibrahim  and
-      Touileb, Samia  and
-      Zitouni, Imed  and
-      Abdelali, Ahmed  and
-      Al-Ghamdi, Sharefah  and
-      Alkhereyf, Sakhar  and
-      Zaghouani, Wajdi  and
-      Khalifa, Salam  and
-      AlKhamissi, Badr  and
-      Almatham, Rawan  and
-      Hamed, Injy  and
-      Alyafeai, Zaid  and
-      Alowisheq, Areeb  and
-      Inoue, Go  and
-      Mrini, Khalil  and
-      Alshammari, Waad",
-    booktitle = "Proceedings of The Third {A}rabic Natural Language Processing Conference: Shared Tasks",
-    month = nov,
-    year = "2025",
-    address = "Suzhou, China",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2025.arabicnlp-sharedtasks.94/",
-    doi = "10.18653/v1/2025.arabicnlp-sharedtasks.94",
-    pages = "683--691",
-    ISBN = "979-8-89176-356-2"
-}`
-    },
-    {
-      title: "OncoReGen: A Reinforcement-Guided GPT Pipeline for Precision Oncology and EGFR Inhibitor Discovery",
-      authors: [
-        "Istahak Ahammed",
-        "Abid Hossain",
-        "Snaholata Mondal",
-        "Md. Al-Mamun Provath",
-        "Musfequa Rahman",
-        "Rifa Nawal",
-        "Joy Das"
-      ],
-      highlightAuthor: "Joy Das",
-      venue: "2025 28th International Conference on Computer and Information Technology (ICCIT)",
-      publisher: "IEEE",
-      pages: "pp. 1016–1021",
-      date: "Dec 2025",
-      year: "2025",
-      note: "DOI: 10.1109/ICCIT68739.2025.11491169",
-      links: [
-        { label: "IEEE Xplore", url: "https://ieeexplore.ieee.org/abstract/document/11491169" },
-        { label: "DOI", url: "https://doi.org/10.1109/ICCIT68739.2025.11491169" }
-      ],
-      bibtex: `@INPROCEEDINGS{11491169,
-  author={Ahammed, Istahak and Hossain, Abid and Mondal, Snaholata and Provath, Md. Al-Mamun and Rahman, Musfequa and Nawal, Rifa and Das, Joy},
-  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},
-  title={OncoReGen: A Reinforcement-Guided GPT Pipeline for Precision Oncology and EGFR Inhibitor Discovery},
-  year={2025},
-  volume={},
-  number={},
-  pages={1016-1021},
-  keywords={Protocols;HTTP;Artificial intelligence;Deep learning;Generative Pre-trained transformer;Machine learning;Reinforcement learning;Predictive models;Convolutional neural networks;Large language models;Reinforcement learning;EGFR;PPO;SMILES;Molecular generation;Drug Discovery},
-  doi={10.1109/ICCIT68739.2025.11491169}
-}`
-    }
-  ],
+
   // --------------------------------------------------------------------------
   // 8. EDUCATION
   // --------------------------------------------------------------------------
@@ -352,14 +354,13 @@ window.ACADEMIC_PROFILE = {
         "Machine Learning",
         "Artificial Intelligence",
         "Theory of Computing",
-        "Applied Statistics and Queuing Theory",
+        "Applied Statistics",
         "Data Structures",
         "Algorithms",
         "Structured Programming",
         "Object-Oriented Programming",
         "Database Management Systems",
         "Software Engineering",
-        "Digital Systems Design",
         "Digital Logic Design",
         "Computer Graphics",
         "Compiler Design",
@@ -367,12 +368,13 @@ window.ACADEMIC_PROFILE = {
         "System Analysis and Design",
         "Computer Networks",
         "Computer Architecture",
-        "Computer Peripherals and Interfacing",
-        "Microprocessors and Assembly Language Programming",
+        "Microprocessors and Interfacing",
         "Operating Systems",
         "Data Communication",
         "Fourier Analysis and Laplace Transformation",
-        "Numerical Analysis",
+        "Differential and Integral Calculus",
+        "Co-ordinate Geometry and Differential Equation",
+        "Vector Calculus, Linear Algebra and Complex variable",
         "Discrete Mathematics"
       ]
     }
