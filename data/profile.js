@@ -336,7 +336,7 @@ window.ACADEMIC_PROFILE = {
   // --------------------------------------------------------------------------
   // 8. EDUCATION
   // --------------------------------------------------------------------------
-  education: [
+ education: [
     {
       degree: "B.Sc. in Computer Science and Engineering",
       institution: "Chittagong University of Engineering & Technology (CUET)",
@@ -347,10 +347,8 @@ window.ACADEMIC_PROFILE = {
       details: [
         "CGPA: 3.54 / 4.00 · Average GPA (Last 4 Semesters): 3.75 / 4.00",
         "Undergraduate Thesis: Transformer-Based Multimodal Framework for Detecting Hate Speech on Social Media (Grade: 4.00 / 4.00, Supervisor: Prof. Dr. M. Moshiul Hoque)"
-      ]
-    }
-  ],
-  courses: [
+      ],
+      courses: [
         "Machine Learning",
         "Artificial Intelligence",
         "Theory of Computing",
@@ -379,7 +377,6 @@ window.ACADEMIC_PROFILE = {
       ]
     }
   ],
-
   // --------------------------------------------------------------------------
   // 9. TECHNICAL SKILLS (No proficiency bars or arbitrary percentages)
   // --------------------------------------------------------------------------
