@@ -655,6 +655,16 @@ function renderProjects() {
           })
           .join("");
 
+        var coursesHtml =
+          edu.courses && edu.courses.length
+            ? '<div style="margin-top:18px;">' +
+              '<h4 class="subsection-title" style="margin:0 0 8px;">Undergraduate Courses</h4>' +
+              '<p style="margin:0; font-size:0.89rem; color:var(--text-secondary); line-height:1.75;">|| ' +
+              edu.courses.map(escapeHtml).join(" || ") +
+              " ||</p>" +
+              "</div>"
+            : "";
+
         return (
           '<article class="edu-item">' +
           '<div class="experience-header">' +
@@ -670,6 +680,7 @@ function renderProjects() {
           (edu.department ? " · " + escapeHtml(edu.department) : "") +
           "</p>" +
           (detailsHtml ? '<ul class="edu-details">' + detailsHtml + "</ul>" : "") +
+          coursesHtml +
           "</article>"
         );
       })
