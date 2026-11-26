@@ -68,36 +68,6 @@ window.ACADEMIC_PROFILE = {
   "Trustworthy AI"
   ],
 
-  // --------------------------------------------------------------------------
-  // 4. RESEARCH INTERESTS
-  // Easily editable: add, remove, or refine entries as your direction evolves.
-  // --------------------------------------------------------------------------
-  researchInterests: [
-    {
-      title: "Multimodal Learning & Cross-Modal Fusion",
-      description:
-        "Investigating how textual, acoustic, and visual signals complement—or contradict—each other in noisy real-world social media data. I am interested in architectures that align heterogeneous modalities cleanly and remain effective when individual modalities are weak or missing.",
-      topics: ["Cross-Attention Fusion", "Learnable Modality Weighting", "Audio-Visual-Text Modeling", "Multimodal Benchmarks"]
-    },
-    {
-      title: "Natural Language Processing for Low-Resource Languages",
-      description:
-        "Developing datasets, evaluation protocols, and transformer-based models for underrepresented languages such as Bengali and Arabic, where dialectal variation, code-mixing, and cultural context pose challenges for general-purpose models.",
-      topics: ["Bengali & Arabic NLP", "Dataset Construction", "Multilingual Transformers", "Online Harm & Hate Speech Detection"]
-    },
-    {
-      title: "Trustworthy AI, Robustness & Security",
-      description:
-        "Understanding failure modes and vulnerabilities in machine learning and multimodal systems. Drawing on both ML modeling and hands-on web/application security experience, I am interested in adversarial robustness, explainability (XAI), and reliable deployment.",
-      topics: ["Adversarial Robustness", "Explainable AI (XAI)", "Model Failure Analysis", "AI & Systems Security"]
-    },
-    {
-      title: "Representation Learning & Evaluation",
-      description:
-        "Studying how pretrained language, speech, and vision encoders transfer to specialized downstream tasks under class imbalance and domain shift, with an emphasis on systematic ablation studies and reproducible evaluation.",
-      topics: ["Pretrained Encoders", "Ablation & Fusion Analysis", "Class Imbalance", "Cross-Domain Generalization"]
-    }
-  ],
 
   // --------------------------------------------------------------------------
   // 5. RESEARCH EXPERIENCE
@@ -170,62 +140,6 @@ window.ACADEMIC_PROFILE = {
   // --------------------------------------------------------------------------
   projects: [
     {
-      title: "BanglaMMH: Bengali Multimodal Hate Speech Dataset & Trimodal Transformer",
-      date: "2025 – 2026",
-      featured: true,
-      highlightLabel: "Undergraduate Thesis",
-      problem:
-        "Low-resource languages such as Bengali lack aligned multimodal corpora for studying online hate speech across text, speech, and video.",
-      whyItMatters:
-        "Real-world social media moderation must reason across spoken audio, visual scenes, and captions simultaneously; unimodal detectors fail when harmful cues appear in only one channel.",
-      methodology:
-        "Collected and aligned 2,001 Bengali text, audio, and video samples (BanglaMMH). Built a transformer-based trimodal architecture fusing BanglaBERT (text), Whisper (audio), and ViViT (video) via cross-attention and learnable modality weights.",
-      contribution:
-        "Led dataset curation, preprocessing pipeline design, multimodal architecture implementation, and comparative ablation experiments across unimodal, bimodal, and trimodal setups.",
-      results: "Best trimodal model achieved a macro F1-score of 0.88 (Thesis Grade: 4.00/4.00).",
-      technologies: ["Python", "PyTorch / TensorFlow", "BanglaBERT", "Whisper", "ViViT", "Cross-Attention"],
-      links: []
-    },
-    {
-      title: "Multimodal Fusion for Arabic Hateful Meme Detection (MAHED Shared Task)",
-      date: "Nov 2025",
-      featured: true,
-      highlightLabel: "Published · ArabicNLP 2025",
-      problem:
-        "Arabic internet memes combine dialectal text with culturally grounded imagery, creating subtle hateful expressions that unimodal models struggle to classify reliably.",
-      whyItMatters:
-        "Accurate multimodal filtering helps protect online communities in non-English settings where annotated multimodal benchmarks remain scarce.",
-      methodology:
-        "Designed an early-fusion architecture combining mBERT textual embeddings with InceptionResNetV2 visual representations, evaluated systematically against text-only and image-only baselines.",
-      contribution:
-        "Implemented the multimodal fusion pipeline, conducted model evaluation and error analysis, and first-authored the system description paper.",
-      results: "Official macro F1-score of 0.63 (0.629), ranking 6th among 42 participating teams at ArabicNLP 2025.",
-      technologies: ["Python", "mBERT", "InceptionResNetV2", "Multimodal Fusion", "NLP", "Computer Vision"],
-      links: [
-        { label: "Paper (ACL Anthology)", url: "https://aclanthology.org/2025.arabicnlp-sharedtasks.94/" },
-        { label: "PDF", url: "https://aclanthology.org/2025.arabicnlp-sharedtasks.94.pdf" }
-      ]
-    },
-   {
-      title: "Network Intrusion Detection",
-      highlightLabel: "Cybersecurity · Machine Learning · XAI",
-      goal: "Detect malicious network traffic using SHAP-based XAI to distinguish attacks from benign activity and explain model predictions.",
-      modelLabel: "Models",
-      models: "Random Forest, XGBoost, SVM, ANN, GRU, DNN",
-      results: "Best reported F1-score of 0.9963 with Random Forest",
-      whatIDid: [
-        "Data preprocessing and feature scaling",
-        "Class imbalance handling using SMOTE",
-        "ML and deep learning model training",
-        "Performance comparison using classification metrics",
-        "SHAP-based feature importance analysis to interpret model predictions"
-      ],
-      technologies: ["Python", "Pandas", "Scikit-learn", "TensorFlow", "Matplotlib"],
-      links: [
-        { label: "GitHub Repository", url: "https://github.com/Joy2004114/Network-Intrusion-Detection" }
-      ]
-    },
-    {
       title: "Lung Cancer Prediction",
       highlightLabel: "Healthcare AI · Machine Learning",
       goal: "Predict lung cancer risk from survey-based patient features",
@@ -279,6 +193,25 @@ window.ACADEMIC_PROFILE = {
       ]
     },
     {
+      title: "Network Intrusion Detection",
+      highlightLabel: "Cybersecurity · Machine Learning · XAI",
+      goal: "Detect malicious network traffic using SHAP-based XAI to distinguish attacks from benign activity and explain model predictions.",
+      modelLabel: "Models",
+      models: "Random Forest, XGBoost, SVM, ANN, GRU, DNN",
+      results: "Best reported F1-score of 0.9963 with Random Forest",
+      whatIDid: [
+        "Data preprocessing and feature scaling",
+        "Class imbalance handling using SMOTE",
+        "ML and deep learning model training",
+        "Performance comparison using classification metrics",
+        "SHAP-based feature importance analysis to interpret model predictions"
+      ],
+      technologies: ["Python", "Pandas", "Scikit-learn", "TensorFlow", "Matplotlib"],
+      links: [
+        { label: "GitHub Repository", url: "https://github.com/Joy2004114/Network-Intrusion-Detection" }
+      ]
+    },
+    {
       title: "Home Inventory Management System",
       highlightLabel: "Full-Stack Web Development · MERN Stack · Web Security",
       goal: "Develop a secure web-based system for managing household inventory and tracking items efficiently.",
@@ -316,38 +249,95 @@ window.ACADEMIC_PROFILE = {
     }
   ],
 
-  // --------------------------------------------------------------------------
+ // --------------------------------------------------------------------------
   // 7. PUBLICATIONS
   // If empty ([]), the Publications section and navbar link are hidden automatically.
   // --------------------------------------------------------------------------
   publications: [
     {
-      title: "joy_2004114 at MAHED Shared Task: Filtering Hate Speech from Memes using a Multimodal Fusion-based Approach",
+      title: "joy_2004114 at MAHED Shared Task: Filtering Hate Speech from Memes using A Multimodal Fusion-based Approach",
       authors: ["Joy Das", "Alamgir Hossain", "Mohammed Moshiul Hoque"],
       highlightAuthor: "Joy Das",
-      venue: "Proceedings of the Third Arabic Natural Language Processing Conference: Shared Tasks (ArabicNLP 2025), co-located with EMNLP 2025",
+      venue: "Proceedings of The Third Arabic Natural Language Processing Conference: Shared Tasks (ArabicNLP 2025), co-located with EMNLP 2025, Suzhou, China",
       publisher: "Association for Computational Linguistics (ACL)",
       pages: "pp. 683–691",
       date: "Nov 2025",
       year: "2025",
-      note: "Ranked 6th out of 42 participating teams (Macro F1: 0.63).",
+      note: "Ranked 6th out of 42 participating teams (Macro F1: 0.63) · DOI: 10.18653/v1/2025.arabicnlp-sharedtasks.94",
       links: [
         { label: "ACL Anthology", url: "https://aclanthology.org/2025.arabicnlp-sharedtasks.94/" },
-        { label: "PDF", url: "https://aclanthology.org/2025.arabicnlp-sharedtasks.94.pdf" }
+        { label: "PDF", url: "https://aclanthology.org/2025.arabicnlp-sharedtasks.94.pdf" },
+        { label: "DOI", url: "https://doi.org/10.18653/v1/2025.arabicnlp-sharedtasks.94" }
       ],
-      bibtex: `@inproceedings{das-etal-2025-joy-2004114,
-  title     = "joy\\_2004114 at {MAHED} Shared Task: Filtering Hate Speech from Memes using a Multimodal Fusion-based Approach",
-  author    = "Das, Joy and Hossain, Alamgir and Hoque, Mohammed Moshiul",
-  booktitle = "Proceedings of the Third Arabic Natural Language Processing Conference: Shared Tasks (ArabicNLP 2025)",
-  month     = nov,
-  year      = "2025",
-  publisher = "Association for Computational Linguistics",
-  pages     = "683--691",
-  url       = "https://aclanthology.org/2025.arabicnlp-sharedtasks.94/"
+      bibtex: `@inproceedings{das-etal-2025-joy,
+    title = "joy{\\_}2004114 at {MAHED} Shared Task : Filtering Hate Speech from Memes using A Multimodal Fusion-based Approach",
+    author = "Das, Joy  and
+      Hossain, Alamgir  and
+      Moshiul Hoque, Mohammed",
+    editor = "Darwish, Kareem  and
+      Ali, Ahmed  and
+      Abu Farha, Ibrahim  and
+      Touileb, Samia  and
+      Zitouni, Imed  and
+      Abdelali, Ahmed  and
+      Al-Ghamdi, Sharefah  and
+      Alkhereyf, Sakhar  and
+      Zaghouani, Wajdi  and
+      Khalifa, Salam  and
+      AlKhamissi, Badr  and
+      Almatham, Rawan  and
+      Hamed, Injy  and
+      Alyafeai, Zaid  and
+      Alowisheq, Areeb  and
+      Inoue, Go  and
+      Mrini, Khalil  and
+      Alshammari, Waad",
+    booktitle = "Proceedings of The Third {A}rabic Natural Language Processing Conference: Shared Tasks",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.arabicnlp-sharedtasks.94/",
+    doi = "10.18653/v1/2025.arabicnlp-sharedtasks.94",
+    pages = "683--691",
+    ISBN = "979-8-89176-356-2"
+}`
+    },
+    {
+      title: "OncoReGen: A Reinforcement-Guided GPT Pipeline for Precision Oncology and EGFR Inhibitor Discovery",
+      authors: [
+        "Istahak Ahammed",
+        "Abid Hossain",
+        "Snaholata Mondal",
+        "Md. Al-Mamun Provath",
+        "Musfequa Rahman",
+        "Rifa Nawal",
+        "Joy Das"
+      ],
+      highlightAuthor: "Joy Das",
+      venue: "2025 28th International Conference on Computer and Information Technology (ICCIT)",
+      publisher: "IEEE",
+      pages: "pp. 1016–1021",
+      date: "Dec 2025",
+      year: "2025",
+      note: "DOI: 10.1109/ICCIT68739.2025.11491169",
+      links: [
+        { label: "IEEE Xplore", url: "https://ieeexplore.ieee.org/abstract/document/11491169" },
+        { label: "DOI", url: "https://doi.org/10.1109/ICCIT68739.2025.11491169" }
+      ],
+      bibtex: `@INPROCEEDINGS{11491169,
+  author={Ahammed, Istahak and Hossain, Abid and Mondal, Snaholata and Provath, Md. Al-Mamun and Rahman, Musfequa and Nawal, Rifa and Das, Joy},
+  booktitle={2025 28th International Conference on Computer and Information Technology (ICCIT)},
+  title={OncoReGen: A Reinforcement-Guided GPT Pipeline for Precision Oncology and EGFR Inhibitor Discovery},
+  year={2025},
+  volume={},
+  number={},
+  pages={1016-1021},
+  keywords={Protocols;HTTP;Artificial intelligence;Deep learning;Generative Pre-trained transformer;Machine learning;Reinforcement learning;Predictive models;Convolutional neural networks;Large language models;Reinforcement learning;EGFR;PPO;SMILES;Molecular generation;Drug Discovery},
+  doi={10.1109/ICCIT68739.2025.11491169}
 }`
     }
   ],
-
   // --------------------------------------------------------------------------
   // 8. EDUCATION
   // --------------------------------------------------------------------------
