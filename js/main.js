@@ -418,7 +418,7 @@
   // --------------------------------------------------------------------------
   // 6. Research Projects
   // --------------------------------------------------------------------------
-  function renderProjects() {
+function renderProjects() {
     var container = document.getElementById("projects-list");
     if (!container) return;
 
@@ -443,6 +443,31 @@
           })
           .join("");
 
+        var rowsHtml = "";
+        if (proj.whatIDid) {
+          var bulletsHtml = proj.whatIDid
+            .map(function (b) {
+              return "<li>" + escapeHtml(b) + "</li>";
+            })
+            .join("");
+          rowsHtml =
+            '<div class="project-detail-row"><dt>Goal</dt><dd>' + escapeHtml(proj.goal) + "</dd></div>" +
+            '<div class="project-detail-row"><dt>' + escapeHtml(proj.modelLabel || "Model") + "</dt><dd>" + escapeHtml(proj.models) + "</dd></div>" +
+            (proj.results
+              ? '<div class="project-detail-row"><dt>Result</dt><dd class="project-result">' + escapeHtml(proj.results) + "</dd></div>"
+              : "") +
+            '<div class="project-detail-row"><dt>What I did</dt><dd><ul class="edu-details">' + bulletsHtml + "</ul></dd></div>";
+        } else {
+          rowsHtml =
+            '<div class="project-detail-row"><dt>Problem</dt><dd>' + escapeHtml(proj.problem) + "</dd></div>" +
+            '<div class="project-detail-row"><dt>Motivation</dt><dd>' + escapeHtml(proj.whyItMatters) + "</dd></div>" +
+            '<div class="project-detail-row"><dt>Methodology</dt><dd>' + escapeHtml(proj.methodology) + "</dd></div>" +
+            '<div class="project-detail-row"><dt>Contribution</dt><dd>' + escapeHtml(proj.contribution) + "</dd></div>" +
+            (proj.results
+              ? '<div class="project-detail-row"><dt>Results</dt><dd class="project-result">' + escapeHtml(proj.results) + "</dd></div>"
+              : "");
+        }
+
         return (
           '<article class="project-card' +
           (proj.featured ? " is-featured" : "") +
@@ -459,23 +484,7 @@
           (proj.date ? '<span class="project-date">' + escapeHtml(proj.date) + "</span>" : "") +
           "</div>" +
           '<dl class="project-details">' +
-          '<div class="project-detail-row"><dt>Problem</dt><dd>' +
-          escapeHtml(proj.problem) +
-          "</dd></div>" +
-          '<div class="project-detail-row"><dt>Motivation</dt><dd>' +
-          escapeHtml(proj.whyItMatters) +
-          "</dd></div>" +
-          '<div class="project-detail-row"><dt>Methodology</dt><dd>' +
-          escapeHtml(proj.methodology) +
-          "</dd></div>" +
-          '<div class="project-detail-row"><dt>Contribution</dt><dd>' +
-          escapeHtml(proj.contribution) +
-          "</dd></div>" +
-          (proj.results
-            ? '<div class="project-detail-row"><dt>Results</dt><dd class="project-result">' +
-              escapeHtml(proj.results) +
-              "</dd></div>"
-            : "") +
+          rowsHtml +
           "</dl>" +
           '<div class="project-footer">' +
           '<div class="topic-list">' +
