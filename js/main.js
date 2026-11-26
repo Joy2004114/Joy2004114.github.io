@@ -213,6 +213,7 @@
   }
 
   // --------------------------------------------------------------------------
+  // --------------------------------------------------------------------------
   // 3. Hero / About
   // --------------------------------------------------------------------------
   function renderHero() {
@@ -245,22 +246,8 @@
         ? '<div class="focus-row"><span class="focus-label">Research Focus</span>' +
           tagsHtml +
           "</div>"
-        : "") +
-      '<div class="hero-cta-row">' +
-      '<a class="btn btn-primary" href="' +
-      escapeHtml(profile.cv.path) +
-      '" download="' +
-      escapeHtml(profile.cv.filename) +
-      '">' +
-      ICONS.download +
-      "Download CV</a>" +
-      '<a class="btn btn-secondary" href="#projects">View Research Projects</a>' +
-      (profile.publications && profile.publications.length
-        ? '<a class="btn btn-secondary" href="#publications">Publications</a>'
-        : "") +
-      "</div>";
+        : "");
   }
-
   // --------------------------------------------------------------------------
   // 4. Research Interests
   // --------------------------------------------------------------------------
