@@ -66,6 +66,7 @@ window.ACADEMIC_PROFILE = {
   "Computer Vision",
   "Natural Language Processing",
   "Trustworthy AI"
+  "Healthcare AI"
   ],
 
 // --------------------------------------------------------------------------
