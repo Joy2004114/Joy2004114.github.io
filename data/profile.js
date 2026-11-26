@@ -59,16 +59,15 @@ window.ACADEMIC_PROFILE = {
   // --------------------------------------------------------------------------
   introParagraphs: [
     "I recently completed my B.Sc. in Computer Science and Engineering at Chittagong University of Engineering & Technology (CUET), Bangladesh, where I worked as an Undergraduate Research Fellow in the CUET NLP Lab under the supervision of Prof. Dr. M. Moshiul Hoque.",
-    "My research focuses on multimodal learning, natural language processing for low-resource languages, and trustworthy machine learning. For my undergraduate thesis, I built BanglaMMH—a dataset of 2,001 aligned Bengali text, audio, and video samples—and designed a trimodal transformer framework integrating BanglaBERT, Whisper, and ViViT. I also co-authored a shared-task paper on Arabic multimodal hateful-meme detection published at ArabicNLP 2025 (co-located with EMNLP 2025).",
+    "My research interests lie in multimodal AI, particularly computer vision and NLP. I am interested in exploring their applications across different domains, including healthcare. I am also interested in trustworthy AI and developing reliable and secure machine learning systems.",
     "I am currently applying for Fall 2027 PhD programs in Computer Science and Artificial Intelligence, with particular interest in multimodal representation learning, adversarial robustness, and reliable ML systems."
   ],
 
   focusTags: [
-    "Multimodal Learning",
-    "Natural Language Processing",
-    "Low-Resource Languages",
-    "Trustworthy AI & Robustness",
-    "Representation Learning"
+  "Multimodal AI",
+  "Computer Vision",
+  "Natural Language Processing",
+  "Trustworthy AI"
   ],
 
   // --------------------------------------------------------------------------
